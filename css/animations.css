@@ -1,0 +1,222 @@
+/* Animation Keyframes */
+@keyframes gradient {
+    0%, 100% { 
+        background-position: 0% 50%; 
+    }
+    50% { 
+        background-position: 100% 50%; 
+    }
+}
+
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0); 
+    }
+    50% { 
+        transform: translateY(-20px); 
+    }
+}
+
+@keyframes pulse-slow {
+    0%, 100% { 
+        opacity: 0.2; 
+    }
+    50% { 
+        opacity: 0.4; 
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0) translateX(-50%);
+    }
+    50% {
+        transform: translateY(-10px) translateX(-50%);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Animation Classes */
+.animate-gradient {
+    animation: gradient 8s linear infinite;
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+    animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+.animate-slide-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-slide-up {
+    animation: slideInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+.animate-rotate {
+    animation: rotate 10s linear infinite;
+}
+
+/* Animation Delays */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+.delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
+.delay-800 { animation-delay: 800ms; }
+
+/* Hover Animations */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-rotate:hover {
+    animation: rotate 0.5s ease;
+}
+
+/* Loading Shimmer Effect */
+.shimmer {
+    background: linear-gradient(90deg, 
+        rgba(255,255,255,0) 0%, 
+        rgba(255,255,255,0.1) 50%, 
+        rgba(255,255,255,0) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+/* Counter Animation */
+.counter-animate {
+    display: inline-block;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Skill Bar Animation Trigger */
+.skill-bar-animate {
+    width: 0 !important;
+}
+
+.skill-bar-animate.active {
+    width: var(--skill-width) !important;
+}
+
+/* Parallax Elements */
+.parallax {
+    will-change: transform;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,16 +1,22 @@
-# Assets
+# 📸 Foto de Perfil
 
-Coloque aqui sua foto de perfil com o nome `profile.jpg`.
+## Como adicionar sua foto
 
-A imagem será exibida na seção "Sobre" do portfólio.
+1. **Renomeie sua foto** para: `profile.jpg`
+2. **Cole nesta pasta**: `portfolio/assets/`
+3. **Recarregue o site** (F5)
 
-**Recomendações:**
-- Formato: JPG ou PNG
-- Tamanho recomendado: 400x400px ou maior
-- A imagem será exibida em formato circular
-- Use uma foto profissional de rosto
+## Especificações recomendadas
 
-**Para adicionar sua foto:**
-1. Renomeie sua foto para `profile.jpg`
-2. Cole nesta pasta (`portfolio/assets/`)
-3. Atualize a página para ver a mudança
+- **Formato**: JPG ou PNG
+- **Tamanho mínimo**: 400x400px
+- **Formato de exibição**: Circular (foto de rosto)
+- **Estilo**: Foto profissional
+
+## Resultado
+
+A foto aparecerá na seção **"Sobre"** do portfólio, em um card circular com borda destacada.
+
+---
+
+**Nota**: Sem a foto, será exibido um ícone placeholder.
